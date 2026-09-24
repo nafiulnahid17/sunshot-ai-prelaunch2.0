@@ -8,11 +8,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sunshot AI — Intelligence Beyond Borders",
     description: "Engineered in Bangladesh. Built for global competition.",
-    images: ["/sunshot-logo.jpg"],
+    images: ["/sunshotaiprelaunch/sunshot-logo.jpg"],
   },
   icons: {
-    icon: "/sunshot-logo.jpg",
-    shortcut: "/sunshot-logo.jpg",
+    icon: "/sunshotaiprelaunch/sunshot-logo.jpg",
+    shortcut: "/sunshotaiprelaunch/sunshot-logo.jpg",
   },
 };
 
