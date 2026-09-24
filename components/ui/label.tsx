@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import * as React from "react"
 import { Label as LabelPrimitive } from "radix-ui"
@@ -22,4 +22,3 @@ function Label({
 }
 
 export { Label }
-

@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import * as React from "react"
 import { XIcon } from "lucide-react"
@@ -156,4 +156,3 @@ export {
   DialogTitle,
   DialogTrigger,
 }
-

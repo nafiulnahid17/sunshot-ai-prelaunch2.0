@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import { Collapsible as CollapsiblePrimitive } from "radix-ui"
 
@@ -31,4 +31,3 @@ function CollapsibleContent({
 }
 
 export { Collapsible, CollapsibleTrigger, CollapsibleContent }
-

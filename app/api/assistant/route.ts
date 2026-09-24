@@ -1,4 +1,4 @@
-﻿import { NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 
 const replies = [
   {
@@ -11,11 +11,11 @@ const replies = [
   },
   {
     terms: ["speed", "token", "latency", "fast", "performance"],
-    answer: "The current inference targets are 0.6â€“1.8 seconds to first token, 75â€“140 tokens per second, roughly 1â€“3 seconds for a simple query and 4â€“15 seconds for complex reasoning. Final performance depends on production infrastructure and testing.",
+    answer: "The current inference targets are 0.6–1.8 seconds to first token, 75–140 tokens per second, roughly 1–3 seconds for a simple query and 4–15 seconds for complex reasoning. Final performance depends on production infrastructure and testing.",
   },
   {
     terms: ["gpu", "compute", "h100", "server", "memory"],
-    answer: "The example high-performance inference configuration is 2Ã— NVIDIA H100 SXM 80GB, for 160GB HBM3 and an approximately 1.9 PFLOPS-class FP8 accelerator setup, supported by AMD EPYC-class CPU, 512GB DDR5 ECC and NVMe storage.",
+    answer: "The example high-performance inference configuration is 2× NVIDIA H100 SXM 80GB, for 160GB HBM3 and an approximately 1.9 PFLOPS-class FP8 accelerator setup, supported by AMD EPYC-class CPU, 512GB DDR5 ECC and NVMe storage.",
   },
   {
     terms: ["price", "pricing", "cost", "cheap", "api"],
@@ -23,11 +23,11 @@ const replies = [
   },
   {
     terms: ["legal", "law", "lexglobal", "jurisdiction"],
-    answer: "Sunshotâ€™s legal layer is planned around jurisdiction detection, citation-aware retrieval, cross-jurisdiction understanding and a confidence gate. Dedicated legal document creation and advanced case analysis remain LexGlobal BD capabilities; Sunshot provides the intelligence foundation.",
+    answer: "Sunshot’s legal layer is planned around jurisdiction detection, citation-aware retrieval, cross-jurisdiction understanding and a confidence gate. Dedicated legal document creation and advanced case analysis remain LexGlobal BD capabilities; Sunshot provides the intelligence foundation.",
   },
   {
     terms: ["language", "bangla", "banglish", "english"],
-    answer: "Sunshot is being optimized for Bangla, English, Banglaâ†”English reasoning and natural Banglish, including mixed legal or technical terminology within the same conversation.",
+    answer: "Sunshot is being optimized for Bangla, English, Bangla↔English reasoning and natural Banglish, including mixed legal or technical terminology within the same conversation.",
   },
   {
     terms: ["image", "multimodal", "pdf", "vision", "file"],
@@ -65,11 +65,11 @@ export async function POST(request: Request) {
 
     const normalized = message.toLowerCase();
     const match = replies.find((entry) => entry.terms.some((term) => normalized.includes(term)));
-    const answer = match?.answer ?? "I can explain Sunshot AIâ€™s architecture, benchmarks, pricing, legal intelligence, multilingual features, launch plan, privacy approach, LexGlobal BD integration, inventor profile or development team.";
+    const answer = match?.answer ?? "I can explain Sunshot AI’s architecture, benchmarks, pricing, legal intelligence, multilingual features, launch plan, privacy approach, LexGlobal BD integration, inventor profile or development team.";
     const language = typeof body.language === "string" ? body.language : "en";
     return NextResponse.json({ answer: await translateAnswer(answer, language) });
   } catch {
-    return NextResponse.json({ error: "I couldnâ€™t process that question." }, { status: 400 });
+    return NextResponse.json({ error: "I couldn’t process that question." }, { status: 400 });
   }
 }
 
@@ -90,4 +90,3 @@ async function translateAnswer(text: string, language: string) {
     return text;
   }
 }
-

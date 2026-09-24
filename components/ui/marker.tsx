@@ -1,4 +1,4 @@
-﻿import * as React from "react"
+import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 import { Slot } from "radix-ui"
 
@@ -67,4 +67,3 @@ function MarkerContent({ className, ...props }: React.ComponentProps<"span">) {
 }
 
 export { Marker, MarkerIcon, MarkerContent, markerVariants }
-

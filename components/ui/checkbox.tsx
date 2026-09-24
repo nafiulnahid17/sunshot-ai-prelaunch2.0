@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import * as React from "react"
 import { CheckIcon } from "lucide-react"
@@ -30,4 +30,3 @@ function Checkbox({
 }
 
 export { Checkbox }
-
