@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+﻿import { NextResponse } from "next/server";
 import { addToWaitlist } from "@/db/waitlist";
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -17,7 +17,7 @@ export async function POST(request: Request) {
     return NextResponse.json({
       ok: true,
       message: result.inserted
-        ? "You’re on the Sunshot AI waitlist."
+        ? "Youâ€™re on the Sunshot AI waitlist."
         : "This email is already on the waitlist.",
     });
   } catch (error) {
@@ -28,3 +28,4 @@ export async function POST(request: Request) {
     );
   }
 }
+

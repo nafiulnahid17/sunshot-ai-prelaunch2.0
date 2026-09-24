@@ -1,4 +1,4 @@
-import { headers } from "next/headers";
+﻿import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 
 export type ChatGPTUser = {
@@ -88,3 +88,4 @@ function safeDecodeURIComponent(value: string): string | null {
     return null;
   }
 }
+
